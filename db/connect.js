@@ -1,7 +1,8 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 const connectDB = (uri) => {
-    mongoose.connect(uri)
-}
+  mongoose.set("strictQuery", false);
+  mongoose.connect(uri);
+};
 
-module.exports = connectDB
+module.exports = connectDB;
